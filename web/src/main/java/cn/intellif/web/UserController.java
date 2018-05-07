@@ -1,9 +1,8 @@
 package cn.intellif.web;
 
-import cn.intellif.IUserService;
+import cn.intellif.service.IUserService;
 import cn.intellif.domain.User;
 import com.alibaba.dubbo.config.annotation.Reference;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
-    //@Autowired
+//    @Autowired
     @Reference
     private IUserService userService;
 
@@ -24,7 +23,7 @@ public class UserController {
     }
 
 
-    @RequestMapping("/listAll")
+    @RequestMapping("/findAll")
     public Object listAll(){
         return userService.listAll();
     }

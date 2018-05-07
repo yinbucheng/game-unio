@@ -1,10 +1,9 @@
 package cn.intellif.serviec.impl;
 
-import cn.intellif.IUserService;
+import cn.intellif.service.IUserService;
 import cn.intellif.base.ServerResult;
 import cn.intellif.dao.UserDao;
 import cn.intellif.domain.User;
-import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
