@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
 //    @Autowired
-    @Reference
+    @Reference(version = "1.0")
     private IUserService userService;
 
     @RequestMapping("/save")
