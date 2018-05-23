@@ -1,4 +1,4 @@
-package cn.intellif.serviec.impl;
+package cn.intellif.service.impl;
 
 import cn.intellif.dao.UserDao;
 import cn.intellif.domain.User;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@com.alibaba.dubbo.config.annotation.Service(interfaceClass = IUserService.class,version = "1.0")
+@com.alibaba.dubbo.config.annotation.Service(interfaceClass = IUserService.class,version = "1.0",token = "123")
 public class UserServiceImpl implements IUserService {
 
     @Autowired
@@ -25,6 +25,12 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public List<User> listAll() {
-        return userDao.listAll();
+        return userDao.findAll();
     }
+
+    @Override
+    public List<User> findUserWithName(String name) {
+        return userDao.findLikeField("name",name+"%");
+    }
+
 }

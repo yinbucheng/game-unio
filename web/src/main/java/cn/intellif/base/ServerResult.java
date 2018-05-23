@@ -31,7 +31,7 @@ public class ServerResult implements Serializable {
         return new ServerResult(200,msg);
     }
 
-    public static ServerResult sucess(){
+    public static ServerResult success(){
         return success("操作成功");
     }
 
