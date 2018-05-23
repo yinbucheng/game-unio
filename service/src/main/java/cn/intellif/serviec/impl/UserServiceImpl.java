@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
-@com.alibaba.dubbo.config.annotation.Service(interfaceClass = IUserService.class)
+@com.alibaba.dubbo.config.annotation.Service(interfaceClass = IUserService.class,version = "1.0")
 public class UserServiceImpl implements IUserService {
 
     @Autowired
@@ -24,7 +26,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public Object listAll() {
+    public List<User> listAll() {
         return userDao.listAll();
     }
 }
