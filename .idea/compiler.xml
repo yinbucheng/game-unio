@@ -13,10 +13,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="base" target="1.8" />
+      <module name="base" target="1.7" />
       <module name="game-unio" target="1.8" />
       <module name="service" target="1.8" />
-      <module name="utils" target="1.8" />
+      <module name="utils" target="1.7" />
       <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>

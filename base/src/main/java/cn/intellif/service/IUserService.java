@@ -5,6 +5,6 @@ import cn.intellif.domain.User;
 import java.util.List;
 
 public interface IUserService {
-    Object save(User user);
+    void save(User user);
     List<User> listAll();
 }

@@ -1,9 +1,8 @@
 package cn.intellif.serviec.impl;
 
-import cn.intellif.service.IUserService;
-import cn.intellif.base.ServerResult;
 import cn.intellif.dao.UserDao;
 import cn.intellif.domain.User;
+import cn.intellif.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -20,9 +19,8 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public Object save(User user) {
+    public void save(User user) {
         userDao.save(user);
-        return ServerResult.sucess();
     }
 
     @Override
