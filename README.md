@@ -18,5 +18,13 @@ base  base层中主要是实体对象和业务接口提供给 web层何service�
 3.启动执行输入 java -jar xxxx.jar
 
 ## 注意事情
-mvn打包前要删掉test包下面的类。不知道为啥输入 mvn clean install -Dskip Tests总提示Tests无效
+方法一：
+
+ mvn打包前要删掉test包下面的类。
+ 
+方法二:
+mvn install -DskipTests
+
+方法三
+mvn install -Dmaven.test.skip=true
 
